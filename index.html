@@ -3,13 +3,12 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Talidaga | Studio Portfolio</title>
+<title>Talidaga | Studio Hub</title>
 
 <style>
 :root {
     --bg:#0b0c10;
     --panel:#12131a;
-    --panel2:#161824;
     --text:#eaeaea;
     --muted:#a7a7a7;
     --accent:#7cc7ff;
@@ -23,10 +22,9 @@ body {
     font-family:Arial, Helvetica, sans-serif;
     background:var(--bg);
     color:var(--text);
-    scroll-behavior:smooth;
 }
 
-/* NAV */
+/* TOP BAR */
 nav {
     position:sticky;
     top:0;
@@ -46,7 +44,9 @@ nav a {
     font-size:13px;
 }
 
-nav a:hover { color:var(--accent); }
+nav a:hover {
+    color:var(--accent);
+}
 
 /* HERO */
 header {
@@ -55,8 +55,8 @@ header {
 }
 
 h1 {
+    font-size:48px;
     margin:0;
-    font-size:46px;
 }
 
 .subtitle {
@@ -65,17 +65,17 @@ h1 {
 }
 
 .tagline {
-    max-width:650px;
+    max-width:700px;
     margin:18px auto 0;
     font-style:italic;
     color:#cfcfcf;
 }
 
-/* CLASS CARDS */
+/* CLASS GRID */
 .section {
     max-width:1100px;
     margin:auto;
-    padding:70px 20px;
+    padding:60px 20px;
 }
 
 .section-title {
@@ -87,82 +87,47 @@ h1 {
     padding-left:10px;
 }
 
-/* HOME CLASS SELECT */
-.class-grid {
+/* CARDS */
+.grid {
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:15px;
+    gap:16px;
 }
 
-.class-card {
+.card {
     background:var(--panel);
     border:1px solid var(--border);
     border-radius:14px;
-    padding:20px;
+    padding:22px;
     transition:0.25s;
-    cursor:pointer;
     text-decoration:none;
     color:inherit;
+    display:block;
 }
 
-.class-card:hover {
+.card:hover {
     transform:translateY(-6px);
     border-color:rgba(124,199,255,0.5);
 }
 
-.class-card h2 {
+.card h2 {
     margin:0 0 10px;
+    font-size:20px;
 }
 
-.class-card p {
+.card p {
     font-size:13px;
     color:var(--muted);
+    line-height:1.5;
 }
 
-/* CASE STUDY STYLE SCROLL BLOCKS */
-.case {
-    background:var(--panel);
-    border:1px solid var(--border);
-    border-radius:12px;
-    padding:18px;
-    margin-bottom:15px;
-}
-
-.case p {
+/* IDENTITY NOTE */
+.identity {
+    text-align:center;
     color:var(--muted);
-    font-size:14px;
-}
-
-/* MEDIA GRID */
-.grid {
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:15px;
-}
-
-.media {
-    background:var(--panel);
-    border:1px solid var(--border);
-    border-radius:12px;
-    overflow:hidden;
-}
-
-.media img {
-    width:100%;
-    display:block;
-}
-
-.media p {
-    padding:10px;
     font-size:13px;
-    color:var(--muted);
-}
-
-/* TAL’ELYMOR BLOCK */
-.brand-note {
-    font-size:13px;
-    color:var(--muted);
-    margin-top:10px;
+    max-width:700px;
+    margin:0 auto 30px;
 }
 
 footer {
@@ -177,13 +142,13 @@ footer {
 <body>
 
 <nav>
-    <a href="#home">Home</a>
-    <a href="#illustration">Illustration</a>
-    <a href="#game">Game Systems</a>
-    <a href="#design">Graphic Design</a>
+    <a href="index.html">Home</a>
+    <a href="illustration.html">Illustration</a>
+    <a href="game.html">Game Systems</a>
+    <a href="design.html">Graphic Design</a>
 </nav>
 
-<header id="home">
+<header>
     <h1>Talidaga</h1>
     <div class="subtitle">Visual Systems • Game Analysis • Creative Design</div>
     <div class="tagline">
@@ -191,106 +156,47 @@ footer {
     </div>
 </header>
 
-<!-- CLASS SELECT -->
 <div class="section">
-    <div class="section-title">Choose Discipline</div>
 
-    <div class="class-grid">
+    <div class="identity">
+        Self-directed multidisciplinary creative practice focused on visual storytelling,
+        systems thinking, and interactive design analysis.
+    </div>
 
-        <a class="class-card" href="#illustration">
+    <div class="section-title">Select Discipline</div>
+
+    <div class="grid">
+
+        <a class="card" href="illustration.html">
             <h2>Illustration / Worldbuilding</h2>
-            <p>TTRPG art, creatures, concept design, virtual photography, narrative visuals.</p>
+            <p>
+                Creature design, TTRPG illustration, concept art, virtual photography,
+                and narrative visual development.
+            </p>
         </a>
 
-        <a class="class-card" href="#game">
+        <a class="card" href="game.html">
             <h2>Game Systems / UX / QA</h2>
-            <p>Gameplay analysis, UX testing, board game UX, stream-based system observation.</p>
+            <p>
+                Gameplay analysis, UX testing, system breakdowns, board game UX,
+                and structured bug documentation.
+            </p>
         </a>
 
-        <a class="class-card" href="#design">
+        <a class="card" href="design.html">
             <h2>Graphic Design / Media</h2>
-            <p>Branding, marketing, typography, fake game ads, Tal’Elymor Design systems.</p>
+            <p>
+                Branding, marketing systems, typography, and Tal’Elymor Design
+                (managed by Talidaga).
+            </p>
         </a>
 
     </div>
-</div>
 
-<!-- ILLUSTRATION -->
-<div class="section" id="illustration">
-    <div class="section-title">Illustration / Worldbuilding</div>
-
-    <div class="case">
-        <p>
-            Focused on narrative-driven illustration across creatures, environments,
-            and conceptual world systems. Includes virtual photography and staged visual storytelling
-            for game-like environments.
-        </p>
-    </div>
-
-    <div class="grid">
-        <div class="media">
-            <img src="https://via.placeholder.com/800x500">
-            <p>Creature Concept — world system design study</p>
-        </div>
-
-        <div class="media">
-            <img src="https://via.placeholder.com/800x500">
-            <p>Virtual Photography — staged game environment framing</p>
-        </div>
-    </div>
-</div>
-
-<!-- GAME SYSTEMS -->
-<div class="section" id="game">
-    <div class="section-title">Game Systems / UX / QA</div>
-
-    <div class="case">
-        <p>
-            Systems-focused gameplay analysis through first-play UX testing,
-            completionist exploration, and structured bug documentation.
-            Includes board game UX design and contract-based gameplay analysis work.
-        </p>
-    </div>
-
-    <div class="case">
-        <p>
-            Methodology:
-            Blind playthrough observation • system boundary testing • UX friction tracking •
-            reproduction-based bug logging • real-time stream analysis of player behavior.
-        </p>
-    </div>
-</div>
-
-<!-- GRAPHIC DESIGN -->
-<div class="section" id="design">
-    <div class="section-title">Graphic Design / Media</div>
-
-    <div class="case">
-        <p>
-            Tal’Elymor Design (managed by Talidaga) focuses on branding, marketing systems,
-            typography, and visual communication for indie projects and digital media.
-        </p>
-
-        <p class="brand-note">
-            Includes promotional design, fake game advertisements, and visual identity systems.
-        </p>
-    </div>
-
-    <div class="grid">
-        <div class="media">
-            <img src="https://via.placeholder.com/800x500">
-            <p>Brand Identity — indie project system</p>
-        </div>
-
-        <div class="media">
-            <img src="https://via.placeholder.com/800x500">
-            <p>Game Advertisement — virtual marketing mock</p>
-        </div>
-    </div>
 </div>
 
 <footer>
-    © 2026 Talidaga / Tal’Elymor Design — Systems Portfolio
+    © 2026 Talidaga — Studio Portfolio System
 </footer>
 
 </body>
